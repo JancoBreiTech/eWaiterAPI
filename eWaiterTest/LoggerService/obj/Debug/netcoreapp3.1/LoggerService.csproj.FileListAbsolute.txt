@@ -1,0 +1,13 @@
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\bin\Debug\netcoreapp3.1\Contracts.dll
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\obj\Debug\netcoreapp3.1\LoggerService.csprojAssemblyReference.cache
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\obj\Debug\netcoreapp3.1\LoggerService.AssemblyInfoInputs.cache
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\obj\Debug\netcoreapp3.1\LoggerService.AssemblyInfo.cs
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\bin\Debug\netcoreapp3.1\LoggerService.deps.json
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\bin\Debug\netcoreapp3.1\LoggerService.dll
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\bin\Debug\netcoreapp3.1\LoggerService.pdb
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\bin\Debug\netcoreapp3.1\Contracts.pdb
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\obj\Debug\netcoreapp3.1\LoggerService.csproj.CopyComplete
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\obj\Debug\netcoreapp3.1\LoggerService.dll
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\obj\Debug\netcoreapp3.1\LoggerService.pdb
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\LoggerService\bin\Debug\netcoreapp3.1\Models.pdb

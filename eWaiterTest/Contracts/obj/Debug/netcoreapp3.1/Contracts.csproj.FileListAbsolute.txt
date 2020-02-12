@@ -1,0 +1,11 @@
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\bin\Debug\netcoreapp3.1\Contracts.deps.json
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\bin\Debug\netcoreapp3.1\Contracts.dll
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\bin\Debug\netcoreapp3.1\Contracts.pdb
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\obj\Debug\netcoreapp3.1\Contracts.csprojAssemblyReference.cache
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\obj\Debug\netcoreapp3.1\Contracts.AssemblyInfoInputs.cache
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\obj\Debug\netcoreapp3.1\Contracts.AssemblyInfo.cs
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\obj\Debug\netcoreapp3.1\Contracts.dll
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\obj\Debug\netcoreapp3.1\Contracts.pdb
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\Contracts\obj\Debug\netcoreapp3.1\Contracts.csproj.CopyComplete
