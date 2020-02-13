@@ -1,0 +1,81 @@
+2020-02-13 08:29:35.1483 INFO Returned all owners from database.
+2020-02-13 09:04:08.7668 INFO Returned all owners from database.
+2020-02-13 09:10:35.5728 INFO Returned restaurant with id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09
+2020-02-13 09:26:39.7784 INFO Successfully returned all food types
+2020-02-13 09:26:39.9725 ERROR Something went wrong in GetAllFoodTypes(): Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[Models.Models.FoodType, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[Models.DataTransferObjects.FoodTypeDto, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2020-02-13 09:28:21.1662 INFO Successfully returned all food types
+2020-02-13 09:28:30.3852 ERROR Something went wrong inside GetAllRestaurantsByFoodType action: Lambda expression used inside Include is not valid.
+2020-02-13 09:30:23.8989 INFO Successfully returned all food types
+2020-02-13 09:30:30.8216 INFO Returned food type details with id: 7dfdde9d-a1fd-8ecd-676d-002692fd13b3
+2020-02-13 09:33:51.4560 INFO Returned food type details with id: 7dfdde9d-a1fd-8ecd-676d-002692fd13b3
+2020-02-13 09:33:51.5392 ERROR Something went wrong inside GetAllRestaurantsByFoodType action: Error mapping types.
+
+Mapping types:
+FoodType -> FoodTypeDto
+Models.Models.FoodType -> Models.DataTransferObjects.FoodTypeDto
+
+Type Map configuration:
+FoodType -> FoodTypeDto
+Models.Models.FoodType -> Models.DataTransferObjects.FoodTypeDto
+
+Destination Member:
+Restaurant
+
+2020-02-13 09:34:54.3639 INFO Returned food type details with id: 7dfdde9d-a1fd-8ecd-676d-002692fd13b3
+2020-02-13 09:34:54.4458 ERROR Something went wrong inside GetAllRestaurantsByFoodType action: Error mapping types.
+
+Mapping types:
+FoodType -> FoodTypeDto
+Models.Models.FoodType -> Models.DataTransferObjects.FoodTypeDto
+
+Type Map configuration:
+FoodType -> FoodTypeDto
+Models.Models.FoodType -> Models.DataTransferObjects.FoodTypeDto
+
+Destination Member:
+Restaurant
+
+2020-02-13 09:35:43.2718 INFO Returned food type details with id: 7dfdde9d-a1fd-8ecd-676d-002692fd13b3
+2020-02-13 09:35:43.2905 ERROR Something went wrong inside GetAllRestaurantsByFoodType action: Error mapping types.
+
+Mapping types:
+FoodType -> FoodTypeDto
+Models.Models.FoodType -> Models.DataTransferObjects.FoodTypeDto
+
+Type Map configuration:
+FoodType -> FoodTypeDto
+Models.Models.FoodType -> Models.DataTransferObjects.FoodTypeDto
+
+Destination Member:
+Restaurant
+
+2020-02-13 09:35:54.8528 INFO Returned food type details with id: 7dfdde9d-a1fd-8ecd-676d-002692fd13b3
+2020-02-13 12:32:04.8075 INFO Successfully returned all food types
+2020-02-13 12:32:34.4702 INFO Returned food type details with id: 88ec019d-5620-8f63-77d3-66b45cd589d0
+2020-02-13 12:34:24.8664 INFO Returned food type details with id: 88ec019d-5620-8f63-77d3-66b45cd589d0
+2020-02-13 12:34:24.9647 ERROR Something went wrong inside GetAllRestaurantsByFoodType action: Error mapping types.
+
+Mapping types:
+FoodType -> FoodTypeDto
+Models.Models.FoodType -> Models.DataTransferObjects.FoodTypeDto
+
+Type Map configuration:
+FoodType -> FoodTypeDto
+Models.Models.FoodType -> Models.DataTransferObjects.FoodTypeDto
+
+Destination Member:
+Restaurant
+
+2020-02-13 12:46:13.7126 INFO Returned all owners from database.
+2020-02-13 12:47:32.7100 INFO Returned restaurant with details for id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09
+2020-02-13 12:48:41.4809 INFO Returned restaurant with id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09
+2020-02-13 12:51:08.1225 INFO Returned all owners from database.
+2020-02-13 12:51:45.5073 INFO Returned restaurant with details for id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09
+2020-02-13 12:52:26.7909 INFO Returned restaurant with details for id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09
+2020-02-13 12:52:57.0357 INFO Returned restaurant with details for id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09
+2020-02-13 12:55:25.5684 INFO Returned restaurant with details for id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09
+2020-02-13 13:02:52.6604 INFO Returned restaurant with details for id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09

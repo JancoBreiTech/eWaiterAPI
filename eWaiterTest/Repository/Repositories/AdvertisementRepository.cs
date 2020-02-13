@@ -15,6 +15,12 @@ namespace Repository.Repositories
         {
 
         }
-       
+
+        public IEnumerable<Advertisement> GetAllAdvertisements()
+        {
+            return FindAll()
+                .OrderBy(r => r.DateActiveFrom)
+                .ToList();
+        }
     }
 }

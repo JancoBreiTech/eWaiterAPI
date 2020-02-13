@@ -7,5 +7,6 @@ namespace Contracts.Interfaces
 {
     public interface IAdvertisement: IRepositoryBase<Advertisement>
     {
+        IEnumerable<Advertisement> GetAllAdvertisements();
     }
 }

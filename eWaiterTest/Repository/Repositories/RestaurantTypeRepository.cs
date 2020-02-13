@@ -2,6 +2,7 @@
 using Models.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Repository.Repositories
@@ -11,6 +12,13 @@ namespace Repository.Repositories
         public RestaurantTypeRepository(eWaiterTestContext context) : base(context)
         {
 
+        }
+
+        public IEnumerable<RestaurantType> GetAllRestaurantType()
+        {
+            return FindAll()
+                .OrderBy(r => r.Description)
+                .ToList();
         }
     }
 }

@@ -64,7 +64,8 @@ namespace Models.Models
         public virtual DbSet<Supplier> Supplier { get; set; }
         public virtual DbSet<SupplierAddress> SupplierAddress { get; set; }
         public virtual DbSet<SupplierAgreement> SupplierAgreement { get; set; }
-       public virtual DbSet<UserTableBooking> UserTableBooking { get; set; }
+        public virtual DbSet<UserTableBooking> UserTableBooking { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
