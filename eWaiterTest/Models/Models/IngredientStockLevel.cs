@@ -5,7 +5,7 @@ namespace Models.Models
 {
     public partial class IngredientStockLevel
     {
-        public Guid IngredientId { get; set; }
+        public int IngredientId { get; set; }
         public DateTime StockTackingDate { get; set; }
         public int QtyInStock { get; set; }
 

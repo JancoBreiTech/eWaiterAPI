@@ -5,8 +5,8 @@ namespace Models.Models
 {
     public partial class OrderMenuItem
     {
-        public Guid PlacedOrderId { get; set; }
-        public Guid MenuItemId { get; set; }
+        public int PlacedOrderId { get; set; }
+        public int MenuItemId { get; set; }
         public int ItemQty { get; set; }
         public decimal StartAmount { get; set; }
         public decimal DiscountAmount { get; set; }

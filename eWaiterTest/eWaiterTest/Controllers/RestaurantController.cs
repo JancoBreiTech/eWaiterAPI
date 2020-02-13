@@ -7,6 +7,8 @@ using Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models.DataTransferObjects;
+using Models.DataTransferObjects.Create;
+using Models.Models;
 
 namespace eWaiterTest.Controllers
 {
@@ -47,8 +49,8 @@ namespace eWaiterTest.Controllers
             }
         }
 
-        [HttpGet("{id}")]
-        public IActionResult GetRestaurantById(Guid id)
+        [HttpGet("{id}", Name = "RestaurantById")]
+        public IActionResult GetRestaurantById(int id)
         {
             try
             {
@@ -74,11 +76,11 @@ namespace eWaiterTest.Controllers
             }
         }
         [HttpGet("{id}/details")]
-        public IActionResult GetRestaurantWithDetails(Guid id)
+        public IActionResult GetRestaurantWithDetails(int id)
         {
             try
             {
-                var restaurant = _repository.Restaurant.GetRestaurantWithFoodTypes(id);
+                var restaurant = _repository.Restaurant.GetRestaurantWithDetails(id);
 
                 if (restaurant == null)
                 {
@@ -96,6 +98,40 @@ namespace eWaiterTest.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Something went wrong inside GetRestaurantWithDetails action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpPost]
+        public IActionResult CreateRestaurant([FromBody] RestaurantForCreationDto restaurant)
+        {
+            try
+            {
+                if (restaurant == null)
+                {
+                    _logger.LogError("Restaurant object sent from client is null.");
+                    return BadRequest("Restaurant object is null");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid restaurant object sent from client.");
+                    return BadRequest("Invalid model object");
+                }
+
+                var restaurantEntity = _mapper.Map<Restaurant>(restaurant);
+   
+
+                _repository.Restaurant.CreateRestaurant(restaurantEntity);
+                _repository.Save();
+
+                var createdRestaurant = _mapper.Map<RestaurantDto>(restaurantEntity);
+
+                return CreatedAtRoute("RestaurantById", new { id = createdRestaurant.Id }, createdRestaurant);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside CreateRestaurant action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

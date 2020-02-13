@@ -7,7 +7,7 @@ namespace Models.DataTransferObjects
 {
     public class FoodTypeDto
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
         
     }

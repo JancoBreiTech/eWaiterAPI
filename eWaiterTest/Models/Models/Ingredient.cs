@@ -11,10 +11,10 @@ namespace Models.Models
             MenuItemIngredient = new HashSet<MenuItemIngredient>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
-        public Guid IngredientTypeId { get; set; }
-        public Guid ReorderFreqId { get; set; }
+        public int IngredientTypeId { get; set; }
+        public int ReorderFreqId { get; set; }
         public int ReorderLevel { get; set; }
         public int ReorderQty { get; set; }
         public decimal StandardCost { get; set; }

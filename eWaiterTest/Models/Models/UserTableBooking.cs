@@ -5,8 +5,8 @@ namespace Models.Models
 {
     public partial class UserTableBooking
     {
-        public Guid CustomerId { get; set; }
-        public Guid OrderTableId { get; set; }
+        public int CustomerId { get; set; }
+        public int OrderTableId { get; set; }
         public DateTime DateBookingMade { get; set; }
         public DateTime DateTableBookedFor { get; set; }
         public int NumberInParty { get; set; }

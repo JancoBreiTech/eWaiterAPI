@@ -11,15 +11,15 @@ namespace Models.Models
             StaffShift = new HashSet<StaffShift>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public Guid StaffRoleId { get; set; }
+        public int StaffRoleId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Email { get; set; }
         public string IdNumber { get; set; }
-        public Guid RestaurantId { get; set; }
+        public int RestaurantId { get; set; }
 
         public virtual Restaurant Restaurant { get; set; }
         public virtual StaffRole StaffRole { get; set; }

@@ -47,7 +47,7 @@ namespace eWaiterTest.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetAllRestaurantsByFoodType(Guid id)
+        public IActionResult GetAllRestaurantsByFoodType(int id)
         {
             try
             {

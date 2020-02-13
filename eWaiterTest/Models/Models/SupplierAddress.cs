@@ -5,9 +5,9 @@ namespace Models.Models
 {
     public partial class SupplierAddress
     {
-        public Guid SupplierId { get; set; }
-        public Guid AddressTypeId { get; set; }
-        public Guid AddressId { get; set; }
+        public int SupplierId { get; set; }
+        public int AddressTypeId { get; set; }
+        public int AddressId { get; set; }
 
         public virtual Address Address { get; set; }
         public virtual AddressType AddressType { get; set; }

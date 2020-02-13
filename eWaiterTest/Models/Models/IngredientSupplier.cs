@@ -5,8 +5,8 @@ namespace Models.Models
 {
     public partial class IngredientSupplier
     {
-        public Guid IngredientId { get; set; }
-        public Guid SupplierId { get; set; }
+        public int IngredientId { get; set; }
+        public int SupplierId { get; set; }
         public decimal ValueSuppliedToDate { get; set; }
         public int QtySuppliedToDate { get; set; }
 

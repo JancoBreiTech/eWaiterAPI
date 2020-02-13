@@ -22,7 +22,7 @@ namespace Repository.Repositories
                 .ToList();
         }
 
-        public FoodType GetAllRestaurantsByFoodType(Guid foodTypeId)
+        public FoodType GetAllRestaurantsByFoodType(int foodTypeId)
         {
             return FindByCondition(f => f.Id.Equals(foodTypeId))
                 .Include(r => r.Restaurant)

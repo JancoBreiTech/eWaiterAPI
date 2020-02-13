@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models.Models
 {
@@ -17,8 +18,7 @@ namespace Models.Models
             RestaurantType = new HashSet<RestaurantType>();
             Staff = new HashSet<Staff>();
         }
-
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string WebsiteUrl { get; set; }

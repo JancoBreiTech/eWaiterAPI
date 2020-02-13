@@ -10,7 +10,7 @@ namespace Models.Models
             Ingredient = new HashSet<Ingredient>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public virtual ICollection<Ingredient> Ingredient { get; set; }

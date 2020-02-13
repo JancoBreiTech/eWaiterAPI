@@ -5,8 +5,8 @@ namespace Models.Models
 {
     public partial class AgreementSupplier
     {
-        public Guid SupplierAgreementId { get; set; }
-        public Guid SupplierId { get; set; }
+        public int SupplierAgreementId { get; set; }
+        public int SupplierId { get; set; }
 
         public virtual Supplier Supplier { get; set; }
         public virtual SupplierAgreement SupplierAgreement { get; set; }

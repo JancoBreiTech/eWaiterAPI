@@ -5,10 +5,10 @@ namespace Models.Models
 {
     public partial class RestaurantUserComment
     {
-        public Guid Id { get; set; }
-        public Guid CustomerId { get; set; }
-        public Guid StarRatingId { get; set; }
-        public Guid RestaurantId { get; set; }
+        public int Id { get; set; }
+        public int CustomerId { get; set; }
+        public int StarRatingId { get; set; }
+        public int RestaurantId { get; set; }
         public DateTime CommentDate { get; set; }
         public string CommentText { get; set; }
 

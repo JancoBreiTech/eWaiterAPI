@@ -5,8 +5,8 @@ namespace Models.Models
 {
     public partial class Menu
     {
-        public Guid RestaurantId { get; set; }
-        public Guid MenuItemId { get; set; }
+        public int RestaurantId { get; set; }
+        public int MenuItemId { get; set; }
         public DateTime? DateActiveFrom { get; set; }
         public DateTime? DateActiveTo { get; set; }
         public string Description { get; set; }

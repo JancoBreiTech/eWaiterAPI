@@ -13,9 +13,9 @@ namespace Models.Models
             OrderStatus = new HashSet<OrderStatus>();
         }
 
-        public Guid Id { get; set; }
-        public Guid OrderTableId { get; set; }
-        public Guid StaffId { get; set; }
+        public int Id { get; set; }
+        public int OrderTableId { get; set; }
+        public int StaffId { get; set; }
         public decimal Total { get; set; }
         public DateTime OrderDate { get; set; }
 

@@ -79,3 +79,27 @@ Restaurant
 2020-02-13 12:52:57.0357 INFO Returned restaurant with details for id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09
 2020-02-13 12:55:25.5684 INFO Returned restaurant with details for id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09
 2020-02-13 13:02:52.6604 INFO Returned restaurant with details for id: 65f1ba00-f7ba-7d93-0d49-0db1edb60f09
+2020-02-13 13:58:57.6348 ERROR Something went wrong inside CreateRestaurant action: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+RestaurantForCreationDto -> Restaurant
+Models.DataTransferObjects.Create.RestaurantForCreationDto -> Models.Models.Restaurant
+2020-02-13 14:02:02.7340 ERROR Something went wrong inside CreateRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-13 14:10:42.0820 ERROR Something went wrong inside CreateRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-13 14:11:27.6898 ERROR Something went wrong inside CreateRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-13 14:16:37.0383 INFO Returned all owners from database.
+2020-02-13 14:18:19.8870 ERROR Something went wrong inside CreateRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-13 14:19:18.8304 ERROR Something went wrong inside CreateRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-13 14:21:31.9477 ERROR Something went wrong inside CreateRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-13 14:52:02.0510 INFO Returned all owners from database.
+2020-02-13 14:52:25.7155 INFO Returned restaurant with id: 39
+2020-02-13 14:52:40.7122 INFO Returned restaurant with details for id: 39
+2020-02-13 14:53:26.6164 INFO Returned all owners from database.
+2020-02-13 14:53:37.8263 INFO Returned restaurant with id: 39
+2020-02-13 14:53:45.8544 INFO Returned restaurant with details for id: 39
+2020-02-13 14:56:26.9979 INFO Returned restaurant with details for id: 39
+2020-02-13 14:56:56.1608 ERROR Something went wrong inside CreateRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-13 15:01:52.2970 INFO Returned restaurant with details for id: 93
+2020-02-13 15:04:46.6485 INFO Returned restaurant with details for id: 91
+2020-02-13 15:04:54.2656 ERROR Something went wrong inside CreateRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-13 15:14:14.0552 ERROR Something went wrong inside CreateRestaurant action: An error occurred while updating the entries. See the inner exception for details.

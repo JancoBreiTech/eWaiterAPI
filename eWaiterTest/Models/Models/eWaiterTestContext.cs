@@ -130,7 +130,7 @@ namespace Models.Models
             modelBuilder.Entity<AgreementSupplier>(entity =>
             {
                 entity.HasKey(e => new { e.SupplierAgreementId, e.SupplierId })
-                    .HasName("PK__Agreemen__06F8FAC321EE9DF4");
+                    .HasName("PK__Agreemen__06F8FAC3CBFF27DF");
 
                 entity.ToTable("Agreement_Supplier");
 
@@ -159,7 +159,7 @@ namespace Models.Models
             modelBuilder.Entity<CreateOrderForIngredient>(entity =>
             {
                 entity.HasKey(e => e.IngredientId)
-                    .HasName("PK__CreateOr__BEAEB25A83C5A345");
+                    .HasName("PK__CreateOr__BEAEB25AC550D061");
 
                 entity.Property(e => e.IngredientId).ValueGeneratedNever();
 
@@ -208,7 +208,7 @@ namespace Models.Models
             modelBuilder.Entity<CustomerPaymentMethod>(entity =>
             {
                 entity.HasKey(e => new { e.CustomerId, e.PaymentMethodId, e.PlacedOrderId })
-                    .HasName("PK__Customer__F6D4938885FBEC99");
+                    .HasName("PK__Customer__F6D4938832E9C812");
 
                 entity.ToTable("Customer_PaymentMethod");
 
@@ -281,7 +281,7 @@ namespace Models.Models
             modelBuilder.Entity<IngredientStockLevel>(entity =>
             {
                 entity.HasKey(e => e.IngredientId)
-                    .HasName("PK__Ingredie__BEAEB25A9D40C84E");
+                    .HasName("PK__Ingredie__BEAEB25A51B3C4E6");
 
                 entity.Property(e => e.IngredientId).ValueGeneratedNever();
 
@@ -297,7 +297,7 @@ namespace Models.Models
             modelBuilder.Entity<IngredientSupplier>(entity =>
             {
                 entity.HasKey(e => new { e.IngredientId, e.SupplierId })
-                    .HasName("PK__Ingredie__EA10D43167672667");
+                    .HasName("PK__Ingredie__EA10D4317A9CEF36");
 
                 entity.ToTable("Ingredient_Supplier");
 
@@ -359,7 +359,7 @@ namespace Models.Models
             modelBuilder.Entity<Menu>(entity =>
             {
                 entity.HasKey(e => new { e.RestaurantId, e.MenuItemId })
-                    .HasName("PK__Menu__BFD173E7E7C18516");
+                    .HasName("PK__Menu__BFD173E70C62EC34");
 
                 entity.Property(e => e.DateActiveFrom).HasColumnType("date");
 
@@ -416,7 +416,7 @@ namespace Models.Models
             modelBuilder.Entity<MenuItemAllergy>(entity =>
             {
                 entity.HasKey(e => new { e.MenuItemId, e.AllergyId })
-                    .HasName("PK__MenuItem__B30A1CC6689F5BDF");
+                    .HasName("PK__MenuItem__B30A1CC674040853");
 
                 entity.ToTable("MenuItem_Allergy");
 
@@ -436,7 +436,7 @@ namespace Models.Models
             modelBuilder.Entity<MenuItemIngredient>(entity =>
             {
                 entity.HasKey(e => new { e.IngredientId, e.MenuItemId })
-                    .HasName("PK__MenuItem__863A8D28A9BB321F");
+                    .HasName("PK__MenuItem__863A8D2892C29685");
 
                 entity.ToTable("MenuItem_Ingredient");
 
@@ -471,7 +471,7 @@ namespace Models.Models
             modelBuilder.Entity<MenuItemSpecial>(entity =>
             {
                 entity.HasKey(e => new { e.SpecialId, e.MenuItemId })
-                    .HasName("PK__MenuItem__13CAFD1284D0B7CC");
+                    .HasName("PK__MenuItem__13CAFD123BD5BF3F");
 
                 entity.ToTable("MenuItem_Special");
 
@@ -513,7 +513,7 @@ namespace Models.Models
             modelBuilder.Entity<OrderMenuItem>(entity =>
             {
                 entity.HasKey(e => new { e.PlacedOrderId, e.MenuItemId })
-                    .HasName("PK__Order_Me__817F720C41787EA1");
+                    .HasName("PK__Order_Me__817F720CFF342CE8");
 
                 entity.ToTable("Order_MenuItem");
 
@@ -545,7 +545,7 @@ namespace Models.Models
             modelBuilder.Entity<OrderStatus>(entity =>
             {
                 entity.HasKey(e => new { e.PlacedOrderId, e.StatusCatalogId })
-                    .HasName("PK__Order_St__4032B12147A3FE69");
+                    .HasName("PK__Order_St__4032B1214FE30DAC");
 
                 entity.ToTable("Order_Status");
 
@@ -644,7 +644,7 @@ namespace Models.Models
             modelBuilder.Entity<RestaurantAddress>(entity =>
             {
                 entity.HasKey(e => new { e.RestaurantId, e.AddressId })
-                    .HasName("PK__Restaura__27D48E3A79F00334");
+                    .HasName("PK__Restaura__27D48E3A11C48A36");
 
                 entity.ToTable("Restaurant_Address");
 
@@ -664,7 +664,7 @@ namespace Models.Models
             modelBuilder.Entity<RestaurantFacility>(entity =>
             {
                 entity.HasKey(e => new { e.RestaurantId, e.FacilityId })
-                    .HasName("PK__Restaura__D2BE443235C74979");
+                    .HasName("PK__Restaura__D2BE443202F0C087");
 
                 entity.ToTable("Restaurant_Facility");
 
@@ -703,7 +703,7 @@ namespace Models.Models
             modelBuilder.Entity<RestaurantSeating>(entity =>
             {
                 entity.HasKey(e => new { e.RestaurantId, e.SeatingId })
-                    .HasName("PK__Restaura__47B3431228B0C2DA");
+                    .HasName("PK__Restaura__47B34312CA3F50AC");
 
                 entity.ToTable("Restaurant_Seating");
 
@@ -836,7 +836,7 @@ namespace Models.Models
             modelBuilder.Entity<StaffShift>(entity =>
             {
                 entity.HasKey(e => new { e.StaffId, e.ShiftId })
-                    .HasName("PK__Staff_Sh__9ADE289F4B0FF8BB");
+                    .HasName("PK__Staff_Sh__9ADE289F8D04F594");
 
                 entity.ToTable("Staff_Shift");
 
@@ -891,7 +891,7 @@ namespace Models.Models
             modelBuilder.Entity<SupplierAddress>(entity =>
             {
                 entity.HasKey(e => new { e.SupplierId, e.AddressTypeId, e.AddressId })
-                    .HasName("PK__Supplier__B9502C5C59649D0F");
+                    .HasName("PK__Supplier__B9502C5C841A8325");
 
                 entity.ToTable("Supplier_Address");
 
@@ -932,7 +932,7 @@ namespace Models.Models
             modelBuilder.Entity<UserTableBooking>(entity =>
             {
                 entity.HasKey(e => new { e.CustomerId, e.OrderTableId })
-                    .HasName("PK__User_Tab__8B2003CBC2A4E4B4");
+                    .HasName("PK__User_Tab__8B2003CB8768DDAB");
 
                 entity.ToTable("User_Table_Booking");
 

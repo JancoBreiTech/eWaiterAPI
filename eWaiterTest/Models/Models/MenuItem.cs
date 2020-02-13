@@ -15,12 +15,12 @@ namespace Models.Models
             OrderMenuItem = new HashSet<OrderMenuItem>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public Guid ItemCategoryId { get; set; }
-        public Guid ItemTypeId { get; set; }
-        public Guid ItemStatusId { get; set; }
+        public int ItemCategoryId { get; set; }
+        public int ItemTypeId { get; set; }
+        public int ItemStatusId { get; set; }
 
         public virtual ItemCategory ItemCategory { get; set; }
         public virtual ItemStatus ItemStatus { get; set; }

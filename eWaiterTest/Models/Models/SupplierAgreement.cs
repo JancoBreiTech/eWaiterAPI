@@ -10,7 +10,7 @@ namespace Models.Models
             AgreementSupplier = new HashSet<AgreementSupplier>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public int? DeliveryLeadTime { get; set; }
         public decimal? StandardPrice { get; set; }

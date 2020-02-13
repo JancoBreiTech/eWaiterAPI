@@ -5,7 +5,7 @@ namespace Models.Models
 {
     public partial class CreateOrderForIngredient
     {
-        public Guid IngredientId { get; set; }
+        public int IngredientId { get; set; }
         public DateTime OrderDate { get; set; }
         public int QtyInOrder { get; set; }
 

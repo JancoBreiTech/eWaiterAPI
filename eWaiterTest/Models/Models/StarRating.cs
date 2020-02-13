@@ -10,7 +10,7 @@ namespace Models.Models
             RestaurantUserComment = new HashSet<RestaurantUserComment>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public int StarValue { get; set; }
 
         public virtual ICollection<RestaurantUserComment> RestaurantUserComment { get; set; }

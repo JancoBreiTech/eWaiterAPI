@@ -5,8 +5,8 @@ namespace Models.Models
 {
     public partial class RestaurantSeating
     {
-        public Guid RestaurantId { get; set; }
-        public Guid SeatingId { get; set; }
+        public int RestaurantId { get; set; }
+        public int SeatingId { get; set; }
 
         public virtual Restaurant Restaurant { get; set; }
         public virtual Seating Seating { get; set; }

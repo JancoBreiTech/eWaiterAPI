@@ -6,7 +6,7 @@ namespace Models.DataTransferObjects
 {
     public class AdvertisementDto
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public DateTime? DateActiveFrom { get; set; }
         public DateTime? DateActiveTo { get; set; }
         public decimal? Price { get; set; }

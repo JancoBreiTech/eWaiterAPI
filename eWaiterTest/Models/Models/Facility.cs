@@ -10,7 +10,7 @@ namespace Models.Models
             RestaurantFacility = new HashSet<RestaurantFacility>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
 
         public virtual ICollection<RestaurantFacility> RestaurantFacility { get; set; }

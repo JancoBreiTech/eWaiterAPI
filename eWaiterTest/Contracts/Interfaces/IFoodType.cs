@@ -8,6 +8,6 @@ namespace Contracts.Interfaces
     public interface IFoodType:IRepositoryBase<FoodType>
     {
         IEnumerable<FoodType> GetAllFoodTypes();
-        FoodType GetAllRestaurantsByFoodType(Guid foodTypeId);
+        FoodType GetAllRestaurantsByFoodType(int foodTypeId);
     }
 }

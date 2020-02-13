@@ -10,7 +10,7 @@ namespace Models.Models
             MenuItem = new HashSet<MenuItem>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
         public DateTime? DateActiveFrom { get; set; }
         public DateTime? DateActiveTo { get; set; }

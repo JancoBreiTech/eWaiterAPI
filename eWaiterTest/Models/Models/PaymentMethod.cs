@@ -10,7 +10,7 @@ namespace Models.Models
             CustomerPaymentMethod = new HashSet<CustomerPaymentMethod>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
 
         public virtual ICollection<CustomerPaymentMethod> CustomerPaymentMethod { get; set; }

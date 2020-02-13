@@ -11,7 +11,7 @@ namespace Models.Models
             UserTableBooking = new HashSet<UserTableBooking>();
         }
 
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
         public string BillSplitYn { get; set; }
 

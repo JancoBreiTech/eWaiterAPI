@@ -15,7 +15,12 @@ namespace Repository.Repositories
 
         }
 
-        public Restaurant GetRestaurantById(Guid restaurantId)
+        public void CreateRestaurant(Restaurant restaurant)
+        {
+            Create(restaurant);
+        }
+
+        public Restaurant GetRestaurantById(int restaurantId)
         {
             return FindByCondition(r => r.Id == restaurantId)
                 .FirstOrDefault();
@@ -28,7 +33,7 @@ namespace Repository.Repositories
                 .ToList();
         }
 
-        public Restaurant GetRestaurantWithFoodTypes(Guid restaurantId)
+        public Restaurant GetRestaurantWithDetails(int restaurantId)
         {
             return FindByCondition(r => r.Id.Equals(restaurantId))
                 .Include(f => f.FoodType)
