@@ -20,5 +20,11 @@ namespace Repository.Repositories
                 .OrderBy(r => r.RestaurantId)
                 .ToList();
         }
+
+        public IEnumerable<RestaurantImg> RestaurantImgsByRestaurant(int restaurantId)
+        {
+            return FindByCondition(a => a.RestaurantId.Equals(restaurantId)).ToList();
+
+        }
     }
 }

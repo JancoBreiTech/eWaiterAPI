@@ -15,6 +15,12 @@ namespace Repository.Repositories
 
         }
 
+        public IEnumerable<FoodType> FoodTypesByRestaurant(int restaurantId)
+        {
+            return FindByCondition(a => a.RestaurantId.Equals(restaurantId)).ToList();
+
+        }
+
         public IEnumerable<FoodType> GetAllFoodTypes()
         {
             return FindAll()

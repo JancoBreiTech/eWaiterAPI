@@ -11,5 +11,7 @@ namespace Contracts.Interfaces
         Restaurant GetRestaurantById(int restaurantId);
         Restaurant GetRestaurantWithDetails(int restaurantId);
         void CreateRestaurant(Restaurant restaurant);
+        void UpdateRestaurant(Restaurant restaurant);
+        void DeleteRestaurant(Restaurant restaurant);
     }
 }

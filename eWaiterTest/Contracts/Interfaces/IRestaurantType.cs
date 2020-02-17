@@ -8,5 +8,7 @@ namespace Contracts.Interfaces
     public interface IRestaurantType: IRepositoryBase<RestaurantType>
     {
         IEnumerable<RestaurantType> GetAllRestaurantType();
+        IEnumerable<RestaurantType> RestaurantTypesByRestaurant(int restaurantId);
+
     }
 }

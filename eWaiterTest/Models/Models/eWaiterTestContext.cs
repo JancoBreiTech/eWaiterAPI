@@ -66,13 +66,12 @@ namespace Models.Models
         public virtual DbSet<SupplierAgreement> SupplierAgreement { get; set; }
         public virtual DbSet<UserTableBooking> UserTableBooking { get; set; }
 
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Address>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.City)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -100,8 +99,6 @@ namespace Models.Models
 
             modelBuilder.Entity<AddressType>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -109,8 +106,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Advertisement>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.AdvFile).HasMaxLength(1);
 
                 entity.Property(e => e.DateActiveFrom).HasColumnType("date");
@@ -130,7 +125,7 @@ namespace Models.Models
             modelBuilder.Entity<AgreementSupplier>(entity =>
             {
                 entity.HasKey(e => new { e.SupplierAgreementId, e.SupplierId })
-                    .HasName("PK__Agreemen__06F8FAC3CBFF27DF");
+                    .HasName("PK__Agreemen__06F8FAC3EEAB6F7B");
 
                 entity.ToTable("Agreement_Supplier");
 
@@ -149,8 +144,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Allergy>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -159,9 +152,9 @@ namespace Models.Models
             modelBuilder.Entity<CreateOrderForIngredient>(entity =>
             {
                 entity.HasKey(e => e.IngredientId)
-                    .HasName("PK__CreateOr__BEAEB25AC550D061");
+                    .HasName("PK__CreateOr__BEAEB25A0656D618");
 
-                entity.Property(e => e.IngredientId).ValueGeneratedNever();
+                entity.Property(e => e.IngredientId).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.OrderDate).HasColumnType("date");
 
@@ -174,8 +167,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Customer>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.ConfirmationCode)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -208,7 +199,7 @@ namespace Models.Models
             modelBuilder.Entity<CustomerPaymentMethod>(entity =>
             {
                 entity.HasKey(e => new { e.CustomerId, e.PaymentMethodId, e.PlacedOrderId })
-                    .HasName("PK__Customer__F6D4938832E9C812");
+                    .HasName("PK__Customer__F6D493889DF87500");
 
                 entity.ToTable("Customer_PaymentMethod");
 
@@ -233,8 +224,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Facility>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -242,8 +231,6 @@ namespace Models.Models
 
             modelBuilder.Entity<FoodType>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -257,8 +244,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Ingredient>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -281,9 +266,9 @@ namespace Models.Models
             modelBuilder.Entity<IngredientStockLevel>(entity =>
             {
                 entity.HasKey(e => e.IngredientId)
-                    .HasName("PK__Ingredie__BEAEB25A51B3C4E6");
+                    .HasName("PK__Ingredie__BEAEB25A972E6047");
 
-                entity.Property(e => e.IngredientId).ValueGeneratedNever();
+                entity.Property(e => e.IngredientId).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.StockTackingDate).HasColumnType("date");
 
@@ -297,9 +282,11 @@ namespace Models.Models
             modelBuilder.Entity<IngredientSupplier>(entity =>
             {
                 entity.HasKey(e => new { e.IngredientId, e.SupplierId })
-                    .HasName("PK__Ingredie__EA10D4317A9CEF36");
+                    .HasName("PK__Ingredie__EA10D4310311B346");
 
                 entity.ToTable("Ingredient_Supplier");
+
+                entity.Property(e => e.IngredientId).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.ValueSuppliedToDate).HasColumnType("decimal(18, 0)");
 
@@ -318,8 +305,6 @@ namespace Models.Models
 
             modelBuilder.Entity<IngredientType>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -327,8 +312,6 @@ namespace Models.Models
 
             modelBuilder.Entity<ItemCategory>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -336,8 +319,6 @@ namespace Models.Models
 
             modelBuilder.Entity<ItemStatus>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.DateActiveFrom).HasColumnType("datetime");
 
                 entity.Property(e => e.DateActiveTo).HasColumnType("datetime");
@@ -349,8 +330,6 @@ namespace Models.Models
 
             modelBuilder.Entity<ItemType>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -359,7 +338,7 @@ namespace Models.Models
             modelBuilder.Entity<Menu>(entity =>
             {
                 entity.HasKey(e => new { e.RestaurantId, e.MenuItemId })
-                    .HasName("PK__Menu__BFD173E70C62EC34");
+                    .HasName("PK__Menu__BFD173E718A506CB");
 
                 entity.Property(e => e.DateActiveFrom).HasColumnType("date");
 
@@ -384,8 +363,6 @@ namespace Models.Models
 
             modelBuilder.Entity<MenuItem>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(100);
@@ -416,7 +393,7 @@ namespace Models.Models
             modelBuilder.Entity<MenuItemAllergy>(entity =>
             {
                 entity.HasKey(e => new { e.MenuItemId, e.AllergyId })
-                    .HasName("PK__MenuItem__B30A1CC674040853");
+                    .HasName("PK__MenuItem__B30A1CC66690B958");
 
                 entity.ToTable("MenuItem_Allergy");
 
@@ -436,7 +413,7 @@ namespace Models.Models
             modelBuilder.Entity<MenuItemIngredient>(entity =>
             {
                 entity.HasKey(e => new { e.IngredientId, e.MenuItemId })
-                    .HasName("PK__MenuItem__863A8D2892C29685");
+                    .HasName("PK__MenuItem__863A8D28F39BB085");
 
                 entity.ToTable("MenuItem_Ingredient");
 
@@ -455,8 +432,6 @@ namespace Models.Models
 
             modelBuilder.Entity<MenuItemPrice>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.DateFrom).HasColumnType("date");
 
                 entity.Property(e => e.Price).HasColumnType("decimal(18, 0)");
@@ -471,7 +446,7 @@ namespace Models.Models
             modelBuilder.Entity<MenuItemSpecial>(entity =>
             {
                 entity.HasKey(e => new { e.SpecialId, e.MenuItemId })
-                    .HasName("PK__MenuItem__13CAFD123BD5BF3F");
+                    .HasName("PK__MenuItem__13CAFD1273E51B17");
 
                 entity.ToTable("MenuItem_Special");
 
@@ -490,8 +465,6 @@ namespace Models.Models
 
             modelBuilder.Entity<OrderComment>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.ComlplaintYn)
                     .IsRequired()
                     .HasColumnName("Comlplaint_YN")
@@ -513,7 +486,7 @@ namespace Models.Models
             modelBuilder.Entity<OrderMenuItem>(entity =>
             {
                 entity.HasKey(e => new { e.PlacedOrderId, e.MenuItemId })
-                    .HasName("PK__Order_Me__817F720CFF342CE8");
+                    .HasName("PK__Order_Me__817F720CE3982470");
 
                 entity.ToTable("Order_MenuItem");
 
@@ -545,7 +518,7 @@ namespace Models.Models
             modelBuilder.Entity<OrderStatus>(entity =>
             {
                 entity.HasKey(e => new { e.PlacedOrderId, e.StatusCatalogId })
-                    .HasName("PK__Order_St__4032B1214FE30DAC");
+                    .HasName("PK__Order_St__4032B121EE12BC53");
 
                 entity.ToTable("Order_Status");
 
@@ -566,8 +539,6 @@ namespace Models.Models
 
             modelBuilder.Entity<OrderTable>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.BillSplitYn)
                     .IsRequired()
                     .HasColumnName("BillSplit_YN")
@@ -580,8 +551,6 @@ namespace Models.Models
 
             modelBuilder.Entity<PaymentMethod>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -589,8 +558,6 @@ namespace Models.Models
 
             modelBuilder.Entity<PlacedOrder>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.OrderDate).HasColumnType("datetime");
 
                 entity.Property(e => e.Total).HasColumnType("decimal(18, 0)");
@@ -610,8 +577,6 @@ namespace Models.Models
 
             modelBuilder.Entity<PlannedShift>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -619,8 +584,6 @@ namespace Models.Models
 
             modelBuilder.Entity<ReorderFrequency>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Frequency)
                     .IsRequired()
                     .HasMaxLength(20);
@@ -628,8 +591,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Restaurant>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description).HasMaxLength(140);
 
                 entity.Property(e => e.Name).HasMaxLength(50);
@@ -644,7 +605,7 @@ namespace Models.Models
             modelBuilder.Entity<RestaurantAddress>(entity =>
             {
                 entity.HasKey(e => new { e.RestaurantId, e.AddressId })
-                    .HasName("PK__Restaura__27D48E3A11C48A36");
+                    .HasName("PK__Restaura__27D48E3A4548EF3D");
 
                 entity.ToTable("Restaurant_Address");
 
@@ -664,7 +625,7 @@ namespace Models.Models
             modelBuilder.Entity<RestaurantFacility>(entity =>
             {
                 entity.HasKey(e => new { e.RestaurantId, e.FacilityId })
-                    .HasName("PK__Restaura__D2BE443202F0C087");
+                    .HasName("PK__Restaura__D2BE4432CDED178A");
 
                 entity.ToTable("Restaurant_Facility");
 
@@ -683,8 +644,6 @@ namespace Models.Models
 
             modelBuilder.Entity<RestaurantImg>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -703,7 +662,7 @@ namespace Models.Models
             modelBuilder.Entity<RestaurantSeating>(entity =>
             {
                 entity.HasKey(e => new { e.RestaurantId, e.SeatingId })
-                    .HasName("PK__Restaura__47B34312CA3F50AC");
+                    .HasName("PK__Restaura__47B343123A296863");
 
                 entity.ToTable("Restaurant_Seating");
 
@@ -722,8 +681,6 @@ namespace Models.Models
 
             modelBuilder.Entity<RestaurantType>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description).HasMaxLength(50);
 
                 entity.HasOne(d => d.Restaurant)
@@ -760,8 +717,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Seating>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -769,8 +724,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Shift>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.EndDateTime).HasColumnType("datetime");
 
                 entity.Property(e => e.StartDateTime).HasColumnType("datetime");
@@ -784,8 +737,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Special>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.DateActiveFrom).HasColumnType("date");
 
                 entity.Property(e => e.DateActiveTo).HasColumnType("date");
@@ -795,8 +746,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Staff>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Email).HasMaxLength(50);
 
                 entity.Property(e => e.EndDate).HasColumnType("date");
@@ -824,8 +773,6 @@ namespace Models.Models
 
             modelBuilder.Entity<StaffRole>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -836,7 +783,7 @@ namespace Models.Models
             modelBuilder.Entity<StaffShift>(entity =>
             {
                 entity.HasKey(e => new { e.StaffId, e.ShiftId })
-                    .HasName("PK__Staff_Sh__9ADE289F8D04F594");
+                    .HasName("PK__Staff_Sh__9ADE289F56F9DC08");
 
                 entity.ToTable("Staff_Shift");
 
@@ -853,15 +800,8 @@ namespace Models.Models
                     .HasConstraintName("FK__Staff_Shi__Staff__22751F6C");
             });
 
-            modelBuilder.Entity<StarRating>(entity =>
-            {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-            });
-
             modelBuilder.Entity<StatusCatalog>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Description)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -869,8 +809,6 @@ namespace Models.Models
 
             modelBuilder.Entity<Supplier>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.ContactNr).HasMaxLength(13);
 
                 entity.Property(e => e.Email)
@@ -891,7 +829,7 @@ namespace Models.Models
             modelBuilder.Entity<SupplierAddress>(entity =>
             {
                 entity.HasKey(e => new { e.SupplierId, e.AddressTypeId, e.AddressId })
-                    .HasName("PK__Supplier__B9502C5C841A8325");
+                    .HasName("PK__Supplier__B9502C5C9E0E4A06");
 
                 entity.ToTable("Supplier_Address");
 
@@ -916,8 +854,6 @@ namespace Models.Models
 
             modelBuilder.Entity<SupplierAgreement>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.DiscountAgreement).HasMaxLength(140);
 
                 entity.Property(e => e.DiscountAmount).HasColumnType("decimal(18, 0)");
@@ -932,7 +868,7 @@ namespace Models.Models
             modelBuilder.Entity<UserTableBooking>(entity =>
             {
                 entity.HasKey(e => new { e.CustomerId, e.OrderTableId })
-                    .HasName("PK__User_Tab__8B2003CB8768DDAB");
+                    .HasName("PK__User_Tab__8B2003CB9982B796");
 
                 entity.ToTable("User_Table_Booking");
 

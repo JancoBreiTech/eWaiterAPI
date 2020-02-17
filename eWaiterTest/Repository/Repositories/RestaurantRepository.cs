@@ -20,6 +20,11 @@ namespace Repository.Repositories
             Create(restaurant);
         }
 
+        public void DeleteRestaurant(Restaurant restaurant)
+        {
+            Delete(restaurant);
+        }
+
         public Restaurant GetRestaurantById(int restaurantId)
         {
             return FindByCondition(r => r.Id == restaurantId)
@@ -41,6 +46,11 @@ namespace Repository.Repositories
                 .Include(ri => ri.RestaurantImg)
                 .Include(rt => rt.RestaurantType)
                 .FirstOrDefault();
+        }
+
+        public void UpdateRestaurant(Restaurant restaurant)
+        {
+            Update(restaurant); ;
         }
     }
 }

@@ -16,6 +16,11 @@ namespace Repository.Repositories
 
         }
 
+        public IEnumerable<Advertisement> AdvertisementsByRestaurant(int restaurantId)
+        {
+            return FindByCondition(a => a.RestaurantId.Equals(restaurantId)).ToList();
+        }
+
         public IEnumerable<Advertisement> GetAllAdvertisements()
         {
             return FindAll()

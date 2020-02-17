@@ -1,0 +1,6 @@
+2020-02-17 10:20:14.9197 ERROR Something went wrong inside DeleteRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-17 10:21:58.0374 ERROR Something went wrong inside DeleteRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-17 10:24:13.7619 ERROR Cannot delete restaurant with id: 2. It has related records. Delete those records first
+2020-02-17 10:24:59.6248 ERROR Something went wrong inside DeleteRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-17 10:25:06.8814 ERROR Something went wrong inside DeleteRestaurant action: An error occurred while updating the entries. See the inner exception for details.
+2020-02-17 10:25:12.0133 ERROR Cannot delete restaurant with id: 5. It has related records. Delete those records first

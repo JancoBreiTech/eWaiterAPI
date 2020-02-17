@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models.DataTransferObjects;
 using Models.DataTransferObjects.Create;
+using Models.DataTransferObjects.Update;
 using Models.Models;
 
 namespace eWaiterTest.Controllers
@@ -120,7 +121,7 @@ namespace eWaiterTest.Controllers
                 }
 
                 var restaurantEntity = _mapper.Map<Restaurant>(restaurant);
-   
+
 
                 _repository.Restaurant.CreateRestaurant(restaurantEntity);
                 _repository.Save();
@@ -132,6 +133,77 @@ namespace eWaiterTest.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Something went wrong inside CreateRestaurant action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult UpdateRestaurant(int id, [FromBody] RestaurantForUpdateDto restaurant)
+        {
+            try
+            {
+                if (restaurant == null)
+                {
+                    _logger.LogError("Restaurant object sent from client is null.");
+                    return BadRequest("Restaurant object is null");
+                }
+
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid restaurant object sent from client.");
+                    return BadRequest("Invalid model object");
+                }
+
+                var restaurantEntity = _repository.Restaurant.GetRestaurantById(id);
+                if (restaurantEntity == null)
+                {
+                    _logger.LogError($"Restaurant with id: {id}, has not been found in the db.");
+                    return NotFound();
+                }
+
+                _mapper.Map(restaurant, restaurantEntity);
+                _repository.Restaurant.UpdateRestaurant(restaurantEntity);
+                _repository.Save();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside UpdateRestaurant action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteRestaurant(int id)
+        {
+            try
+            {
+                var restaurant = _repository.Restaurant.GetRestaurantById(id);
+                if (restaurant == null)
+                {
+                    _logger.LogError($"Restaurant with id: {id}, has not been found in the db.");
+                    return NotFound();
+                }
+
+                if (_repository.Advertisement.AdvertisementsByRestaurant(id).Any() || 
+                    _repository.FoodType.FoodTypesByRestaurant(id).Any() ||
+                    _repository.RestaurantImg.RestaurantImgsByRestaurant(id).Any() ||
+                    _repository.RestaurantType.RestaurantTypesByRestaurant(id).Any())
+                {
+
+                    _logger.LogError($"Cannot delete restaurant with id: {id}. It has related records. Delete those records first");
+                    return BadRequest("Cannot delete restaurant. It has related records. Delete those records first");
+                }
+
+                _repository.Restaurant.DeleteRestaurant(restaurant);
+                _repository.Save();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside DeleteRestaurant action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

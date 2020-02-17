@@ -8,5 +8,7 @@ namespace Contracts.Interfaces
     public interface IRestaurantImg: IRepositoryBase<RestaurantImg>
     {
         IEnumerable<RestaurantImg> GetAllRestaurantImages();
+        IEnumerable<RestaurantImg> RestaurantImgsByRestaurant(int restaurantId);
+
     }
 }

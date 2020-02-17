@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Models.DataTransferObjects;
 using Models.DataTransferObjects.Create;
+using Models.DataTransferObjects.Update;
 using Models.Models;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,7 @@ namespace eWaiterTest
             CreateMap<Restaurant, RestaurantDto>();
 
             CreateMap<RestaurantForCreationDto, Restaurant>();
+            CreateMap<RestaurantForUpdateDto, Restaurant>();
         }
     }
 }
