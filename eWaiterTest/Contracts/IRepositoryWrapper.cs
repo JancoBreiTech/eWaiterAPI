@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Contracts
 {
@@ -12,6 +13,6 @@ namespace Contracts
         IRestaurantImg RestaurantImg { get; }
         IRestaurantType RestaurantType { get; }
         IFoodType FoodType { get; }
-        void Save();
+        Task Save();
     }
 }

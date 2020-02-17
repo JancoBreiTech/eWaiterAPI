@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
@@ -25,27 +26,27 @@ namespace Repository.Repositories
             Delete(restaurant);
         }
 
-        public Restaurant GetRestaurantById(int restaurantId)
+        public async Task<Restaurant> GetRestaurantById(int restaurantId)
         {
-            return FindByCondition(r => r.Id == restaurantId)
-                .FirstOrDefault();
+            return await FindByCondition(r => r.Id == restaurantId)
+                .FirstOrDefaultAsync();
         }
 
-        public IEnumerable<Restaurant> GetRestaurants()
+        public async Task<IEnumerable<Restaurant>> GetRestaurants()
         {
-            return FindAll()
+            return await FindAll()
                 .OrderBy(r => r.Name)
-                .ToList();
+                .ToListAsync();
         }
 
-        public Restaurant GetRestaurantWithDetails(int restaurantId)
+        public async Task<Restaurant> GetRestaurantWithDetails(int restaurantId)
         {
-            return FindByCondition(r => r.Id.Equals(restaurantId))
+            return await FindByCondition(r => r.Id.Equals(restaurantId))
                 .Include(f => f.FoodType)
                 .Include(adv => adv.Advertisement)
                 .Include(ri => ri.RestaurantImg)
                 .Include(rt => rt.RestaurantType)
-                .FirstOrDefault();
+                .FirstOrDefaultAsync();
         }
 
         public void UpdateRestaurant(Restaurant restaurant)

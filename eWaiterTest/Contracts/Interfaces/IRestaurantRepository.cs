@@ -2,14 +2,15 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Contracts.Interfaces
 {
     public interface IRestaurantRepository: IRepositoryBase<Restaurant>
     {
-        IEnumerable<Restaurant> GetRestaurants();
-        Restaurant GetRestaurantById(int restaurantId);
-        Restaurant GetRestaurantWithDetails(int restaurantId);
+        Task<IEnumerable<Restaurant>> GetRestaurants();
+        Task<Restaurant> GetRestaurantById(int restaurantId);
+        Task<Restaurant> GetRestaurantWithDetails(int restaurantId);
         void CreateRestaurant(Restaurant restaurant);
         void UpdateRestaurant(Restaurant restaurant);
         void DeleteRestaurant(Restaurant restaurant);

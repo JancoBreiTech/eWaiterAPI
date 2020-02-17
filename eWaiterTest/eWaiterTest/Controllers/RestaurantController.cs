@@ -30,32 +30,29 @@ namespace eWaiterTest.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllRestaurants()
+        public async Task<IActionResult> GetAllRestaurants()
         {
             try
             {
-                //retrieve all restaurants from db
-                var restaurants = _repository.Restaurant.GetRestaurants();
-                //return log
-                _logger.LogInfo($"Returned all owners from database.");
-                //map model to DTO
+                _logger.LogInfo("Fetching all the Restaurants from the storage");
+                var restaurants = await _repository.Restaurant.GetRestaurants();
                 var restaurantResult = _mapper.Map<IEnumerable<RestaurantDto>>(restaurants);
-                //return HttpStatusCode
+                _logger.LogInfo($"Returning {restaurants.Count()} restaurants");
                 return Ok(restaurantResult);
             }
-            catch (Exception ex)
+            catch
             {
-                _logger.LogError($"Something went wrong inside GetAllOwners(): {ex.Message}");
-                return StatusCode(500, "Internal Server Error");
-            }
+                throw new Exception("Exception while fetching restaurants from db");
+            }  
+           
         }
 
         [HttpGet("{id}", Name = "RestaurantById")]
-        public IActionResult GetRestaurantById(int id)
+        public async Task<IActionResult> GetRestaurantById(int id)
         {
             try
             {
-                var restaurant = _repository.Restaurant.GetRestaurantById(id);
+                var restaurant =await _repository.Restaurant.GetRestaurantById(id);
 
                 if (restaurant == null)
                 {
@@ -70,18 +67,17 @@ namespace eWaiterTest.Controllers
                     return Ok(restaurantResult);
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                _logger.LogError($"Something went wrong inside GetRestaurantById action: {ex.Message}");
-                return StatusCode(500, "Internal server error");
+                throw new Exception($"Exception while fetching restaurant with {id} from db");
             }
         }
         [HttpGet("{id}/details")]
-        public IActionResult GetRestaurantWithDetails(int id)
+        public async Task<IActionResult> GetRestaurantWithDetails(int id)
         {
             try
             {
-                var restaurant = _repository.Restaurant.GetRestaurantWithDetails(id);
+                var restaurant = await _repository.Restaurant.GetRestaurantWithDetails(id);
 
                 if (restaurant == null)
                 {
@@ -96,15 +92,14 @@ namespace eWaiterTest.Controllers
                     return Ok(result);
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                _logger.LogError($"Something went wrong inside GetRestaurantWithDetails action: {ex.Message}");
-                return StatusCode(500, "Internal server error");
+                throw new Exception($"Exception while fetching restaurant details with {id} from db");
             }
         }
 
         [HttpPost]
-        public IActionResult CreateRestaurant([FromBody] RestaurantForCreationDto restaurant)
+        public async Task<IActionResult> CreateRestaurant([FromBody] RestaurantForCreationDto restaurant)
         {
             try
             {
@@ -124,21 +119,20 @@ namespace eWaiterTest.Controllers
 
 
                 _repository.Restaurant.CreateRestaurant(restaurantEntity);
-                _repository.Save();
+                await _repository.Save();
 
                 var createdRestaurant = _mapper.Map<RestaurantDto>(restaurantEntity);
 
                 return CreatedAtRoute("RestaurantById", new { id = createdRestaurant.Id }, createdRestaurant);
             }
-            catch (Exception ex)
+            catch 
             {
-                _logger.LogError($"Something went wrong inside CreateRestaurant action: {ex.Message}");
-                return StatusCode(500, "Internal server error");
+                throw new Exception("Exception while creating restaurant");
             }
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateRestaurant(int id, [FromBody] RestaurantForUpdateDto restaurant)
+        public async Task<IActionResult> UpdateRestaurant(int id, [FromBody] RestaurantForUpdateDto restaurant)
         {
             try
             {
@@ -154,7 +148,7 @@ namespace eWaiterTest.Controllers
                     return BadRequest("Invalid model object");
                 }
 
-                var restaurantEntity = _repository.Restaurant.GetRestaurantById(id);
+                var restaurantEntity = await _repository.Restaurant.GetRestaurantById(id);
                 if (restaurantEntity == null)
                 {
                     _logger.LogError($"Restaurant with id: {id}, has not been found in the db.");
@@ -163,23 +157,22 @@ namespace eWaiterTest.Controllers
 
                 _mapper.Map(restaurant, restaurantEntity);
                 _repository.Restaurant.UpdateRestaurant(restaurantEntity);
-                _repository.Save();
+                await _repository.Save();
 
                 return NoContent();
             }
-            catch (Exception ex)
+            catch
             {
-                _logger.LogError($"Something went wrong inside UpdateRestaurant action: {ex.Message}");
-                return StatusCode(500, "Internal server error");
+                throw new Exception("Exception while updating restaurant from db");
             }
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteRestaurant(int id)
+        public async Task<IActionResult> DeleteRestaurant(int id)
         {
             try
             {
-                var restaurant = _repository.Restaurant.GetRestaurantById(id);
+                var restaurant = await _repository.Restaurant.GetRestaurantById(id);
                 if (restaurant == null)
                 {
                     _logger.LogError($"Restaurant with id: {id}, has not been found in the db.");
@@ -197,14 +190,13 @@ namespace eWaiterTest.Controllers
                 }
 
                 _repository.Restaurant.DeleteRestaurant(restaurant);
-                _repository.Save();
+                await _repository.Save();
 
                 return NoContent();
             }
-            catch (Exception ex)
+            catch 
             {
-                _logger.LogError($"Something went wrong inside DeleteRestaurant action: {ex.Message}");
-                return StatusCode(500, "Internal server error");
+                throw new Exception("Exception while deleting restaurant from db");
             }
         }
     }
