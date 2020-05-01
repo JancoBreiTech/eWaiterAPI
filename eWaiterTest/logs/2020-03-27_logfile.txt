@@ -1,0 +1,12 @@
+2020-03-27 08:21:51.8159 INFO Returned restaurant with details for id: 39
+2020-03-27 08:22:10.5548 INFO Fetching all the Restaurants from the storage
+2020-03-27 08:22:10.7143 INFO Returning 51 restaurants
+2020-03-27 08:22:21.2547 INFO Returned restaurant with details for id: 53
+2020-03-27 08:22:36.0741 INFO Returned restaurant with details for id: 53
+2020-03-27 08:22:46.8965 INFO Fetching all the Restaurants from the storage
+2020-03-27 08:22:46.9314 INFO Returning 51 restaurants
+2020-03-27 08:22:57.5640 INFO Returned restaurant with details for id: 11
+2020-03-27 08:23:09.5326 INFO Fetching all the Restaurants from the storage
+2020-03-27 08:23:09.5773 INFO Returning 51 restaurants
+2020-03-27 08:23:21.0687 INFO Fetching all the Restaurants from the storage
+2020-03-27 08:23:21.0972 INFO Returning 52 restaurants

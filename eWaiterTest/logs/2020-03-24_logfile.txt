@@ -1,0 +1,2 @@
+2020-03-24 11:15:44.7522 INFO Fetching all the Restaurants from the storage
+2020-03-24 11:15:46.7007 INFO Returning 50 restaurants

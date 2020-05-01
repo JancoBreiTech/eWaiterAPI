@@ -1,0 +1,42 @@
+2020-03-17 10:14:21.7221 INFO Fetching all the Restaurants from the storage
+2020-03-17 10:14:23.2321 INFO Returning 50 restaurants
+2020-03-17 10:15:27.9924 INFO Fetching all the Restaurants from the storage
+2020-03-17 10:15:28.0883 INFO Returning 50 restaurants
+2020-03-17 10:19:42.8167 INFO Fetching all the Restaurants from the storage
+2020-03-17 10:19:42.9901 INFO Returning 50 restaurants
+2020-03-17 10:22:47.9405 INFO Fetching all the Restaurants from the storage
+2020-03-17 10:22:48.0268 INFO Returning 50 restaurants
+2020-03-17 13:15:11.0555 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:15:11.2268 INFO Returning 50 restaurants
+2020-03-17 13:15:55.8561 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:15:56.1953 INFO Returning 50 restaurants
+2020-03-17 13:16:01.5114 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:16:01.6026 INFO Returning 50 restaurants
+2020-03-17 13:19:13.2100 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:19:13.3262 INFO Returning 50 restaurants
+2020-03-17 13:19:56.8179 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:19:56.8990 INFO Returning 50 restaurants
+2020-03-17 13:20:07.7302 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:20:07.7712 INFO Returning 50 restaurants
+2020-03-17 13:21:07.7769 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:21:07.8242 INFO Returning 50 restaurants
+2020-03-17 13:21:25.6657 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:21:25.7660 INFO Returning 50 restaurants
+2020-03-17 13:22:27.3074 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:22:27.3997 INFO Returning 50 restaurants
+2020-03-17 13:23:39.3891 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:23:39.5169 INFO Returning 50 restaurants
+2020-03-17 13:25:36.5922 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:25:36.6634 INFO Returning 50 restaurants
+2020-03-17 13:27:01.9008 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:27:02.0589 INFO Returning 50 restaurants
+2020-03-17 13:27:15.6019 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:27:15.7318 INFO Returning 50 restaurants
+2020-03-17 13:27:27.5140 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:27:27.6010 INFO Returning 50 restaurants
+2020-03-17 13:28:12.4947 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:28:12.5573 INFO Returning 50 restaurants
+2020-03-17 13:28:24.9848 INFO Fetching all the Restaurants from the storage
+2020-03-17 13:28:25.0286 INFO Returning 50 restaurants
+2020-03-17 14:07:36.0865 INFO Fetching all the Restaurants from the storage
+2020-03-17 14:07:36.7509 INFO Returning 50 restaurants

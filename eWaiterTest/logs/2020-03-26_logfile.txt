@@ -1,0 +1,144 @@
+2020-03-26 08:50:28.8426 INFO Returned restaurant with details for id: 11
+2020-03-26 08:53:08.4416 INFO Fetching all the Restaurants from the storage
+2020-03-26 08:53:08.6122 INFO Returning 50 restaurants
+2020-03-26 08:53:13.9269 INFO Returned restaurant with details for id: 39
+2020-03-26 08:53:35.3119 INFO Returned restaurant with details for id: 39
+2020-03-26 08:55:18.4853 INFO Returned restaurant with details for id: 39
+2020-03-26 09:00:00.2214 INFO Returned restaurant with details for id: 11
+2020-03-26 09:00:20.4469 INFO Returned restaurant with details for id: 11
+2020-03-26 09:02:36.4496 INFO Returned restaurant with details for id: 39
+2020-03-26 09:02:39.4481 INFO Fetching all the Restaurants from the storage
+2020-03-26 09:02:39.5626 INFO Returning 50 restaurants
+2020-03-26 09:02:46.6646 INFO Returned restaurant with details for id: 33
+2020-03-26 09:04:46.5710 INFO Fetching all the Restaurants from the storage
+2020-03-26 09:04:46.6034 INFO Returning 50 restaurants
+2020-03-26 09:05:02.7403 INFO Returned restaurant with details for id: 33
+2020-03-26 09:05:32.1568 INFO Fetching all the Restaurants from the storage
+2020-03-26 09:05:32.1859 INFO Returning 50 restaurants
+2020-03-26 09:05:38.0216 INFO Returned restaurant with details for id: 39
+2020-03-26 09:15:02.2646 INFO Returned restaurant with details for id: 11
+2020-03-26 09:15:02.4806 ERROR Something went wrong: System.Text.Json.JsonException: A possible object cycle was detected which is not supported. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.JsonSerializer.Write(Utf8JsonWriter writer, Int32 originalWriterDepth, Int32 flushThreshold, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore(Stream utf8Json, Object value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at eWaiterTest.CustomExceptionMiddleWare.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\JancoSteenkamp\Desktop\eWaiterAPI\eWaiterTest\eWaiterTest\CustomExceptionMiddleWare\ExceptionMiddleWare.cs:line 29
+2020-03-26 09:15:51.8359 INFO Returned restaurant with details for id: 11
+2020-03-26 09:27:23.0383 INFO Returned restaurant with details for id: 39
+2020-03-26 09:30:27.1414 INFO Returned restaurant with details for id: 39
+2020-03-26 09:31:22.6540 INFO Returned restaurant with details for id: 39
+2020-03-26 09:31:26.2194 INFO Fetching all the Restaurants from the storage
+2020-03-26 09:31:26.3254 INFO Returning 50 restaurants
+2020-03-26 09:31:27.9821 INFO Returned restaurant with details for id: 39
+2020-03-26 09:31:59.9511 INFO Returned restaurant with details for id: 39
+2020-03-26 09:32:08.4620 INFO Fetching all the Restaurants from the storage
+2020-03-26 09:32:08.5032 INFO Returning 50 restaurants
+2020-03-26 09:32:10.5067 INFO Returned restaurant with details for id: 39
+2020-03-26 09:32:21.0411 INFO Returned restaurant with details for id: 11
+2020-03-26 09:32:41.5089 INFO Returned restaurant with details for id: 11
+2020-03-26 09:32:52.4932 INFO Fetching all the Restaurants from the storage
+2020-03-26 09:32:52.5730 INFO Returning 50 restaurants
+2020-03-26 09:33:05.6179 INFO Returned restaurant with details for id: 11
+2020-03-26 09:37:36.2263 INFO Returned restaurant with details for id: 11
+2020-03-26 09:45:59.8161 INFO Returned restaurant with details for id: 11
+2020-03-26 09:46:06.8964 INFO Returned restaurant with details for id: 11
+2020-03-26 09:47:09.8039 INFO Returned restaurant with details for id: 11
+2020-03-26 09:47:25.6718 INFO Fetching all the Restaurants from the storage
+2020-03-26 09:47:25.7334 INFO Returning 50 restaurants
+2020-03-26 09:47:27.2873 INFO Returned restaurant with details for id: 39
+2020-03-26 09:49:57.1832 INFO Returned restaurant with details for id: 11
+2020-03-26 09:59:36.9905 INFO Returned restaurant with details for id: 39
+2020-03-26 09:59:39.2436 INFO Fetching all the Restaurants from the storage
+2020-03-26 09:59:39.2916 INFO Returning 50 restaurants
+2020-03-26 09:59:44.8444 INFO Returned restaurant with details for id: 11
+2020-03-26 10:01:48.5582 INFO Returned restaurant with details for id: 11
+2020-03-26 10:01:51.5257 INFO Returned restaurant with details for id: 39
+2020-03-26 10:08:24.2047 INFO Returned restaurant with details for id: 11
+2020-03-26 10:29:35.5987 INFO Fetching all the Restaurants from the storage
+2020-03-26 10:29:37.1681 INFO Returning 50 restaurants
+2020-03-26 10:30:21.0215 INFO Returned restaurant with details for id: 39
+2020-03-26 10:30:27.2457 INFO Returned restaurant with details for id: 33
+2020-03-26 10:31:06.1261 INFO Returned restaurant with details for id: 33
+2020-03-26 10:32:17.3739 INFO Fetching all the Restaurants from the storage
+2020-03-26 10:32:17.4793 INFO Returning 50 restaurants
+2020-03-26 10:32:20.2630 INFO Returned restaurant with details for id: 39
+2020-03-26 10:34:59.8582 INFO Returned restaurant with details for id: 39
+2020-03-26 10:36:33.5240 INFO Returned restaurant with details for id: 39
+2020-03-26 10:39:15.6646 INFO Returned restaurant with details for id: 39
+2020-03-26 10:56:00.6398 INFO Returned restaurant with details for id: 39
+2020-03-26 11:01:50.4276 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:01:50.6358 INFO Returning 50 restaurants
+2020-03-26 11:01:52.7859 INFO Returned restaurant with details for id: 39
+2020-03-26 11:03:51.3101 INFO Returned restaurant with details for id: 39
+2020-03-26 11:07:40.0163 INFO Returned restaurant with details for id: 39
+2020-03-26 11:07:53.4115 INFO Returned restaurant with details for id: 39
+2020-03-26 11:08:42.0522 INFO Returned restaurant with details for id: 39
+2020-03-26 11:08:50.5825 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:08:50.6247 INFO Returning 50 restaurants
+2020-03-26 11:08:54.3099 INFO Returned restaurant with details for id: 33
+2020-03-26 11:10:22.6830 INFO Returned restaurant with details for id: 33
+2020-03-26 11:10:44.9342 INFO Returned restaurant with details for id: 33
+2020-03-26 11:14:05.0232 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:14:05.0646 INFO Returning 50 restaurants
+2020-03-26 11:14:07.4813 INFO Returned restaurant with details for id: 46
+2020-03-26 11:30:11.7031 INFO Returned restaurant with details for id: 46
+2020-03-26 11:32:06.7405 INFO Returned restaurant with details for id: 46
+2020-03-26 11:33:59.5691 INFO Returned restaurant with details for id: 46
+2020-03-26 11:34:01.4033 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:34:01.4252 INFO Returning 50 restaurants
+2020-03-26 11:36:00.6827 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:36:00.7656 INFO Returning 50 restaurants
+2020-03-26 11:36:41.8217 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:36:41.8861 INFO Returning 50 restaurants
+2020-03-26 11:36:56.6847 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:36:56.8031 INFO Returning 50 restaurants
+2020-03-26 11:37:44.6275 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:37:44.6737 INFO Returning 50 restaurants
+2020-03-26 11:38:18.9845 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:38:19.1230 INFO Returning 50 restaurants
+2020-03-26 11:38:30.9566 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:38:31.0251 INFO Returning 50 restaurants
+2020-03-26 11:39:12.2820 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:39:12.3768 INFO Returning 50 restaurants
+2020-03-26 11:39:20.1256 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:39:20.2099 INFO Returning 50 restaurants
+2020-03-26 11:39:33.7603 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:39:33.8702 INFO Returning 50 restaurants
+2020-03-26 11:40:51.0400 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:40:51.1175 INFO Returning 50 restaurants
+2020-03-26 11:41:15.0897 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:41:15.1936 INFO Returning 50 restaurants
+2020-03-26 11:42:31.3605 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:42:31.4829 INFO Returning 50 restaurants
+2020-03-26 11:43:18.1789 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:43:18.2679 INFO Returning 50 restaurants
+2020-03-26 11:43:39.6266 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:43:39.6822 INFO Returning 50 restaurants
+2020-03-26 11:44:11.3479 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:44:11.4991 INFO Returning 50 restaurants
+2020-03-26 11:45:25.9814 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:45:26.0050 INFO Returning 50 restaurants
+2020-03-26 11:45:29.6592 INFO Fetching all the Restaurants from the storage
+2020-03-26 11:45:29.6860 INFO Returning 50 restaurants
+2020-03-26 11:45:33.7944 INFO Returned restaurant with details for id: 39
+2020-03-26 11:51:24.9019 INFO Returned restaurant with details for id: 39
+2020-03-26 12:10:12.8598 INFO Returned restaurant with details for id: 39
+2020-03-26 12:11:23.1605 INFO Returned restaurant with details for id: 39
+2020-03-26 12:55:30.8284 INFO Returned restaurant with details for id: 39
+2020-03-26 12:55:41.8170 INFO Returned restaurant with details for id: 39
+2020-03-26 12:55:43.1641 INFO Fetching all the Restaurants from the storage
+2020-03-26 12:55:43.1865 INFO Returning 50 restaurants
+2020-03-26 12:59:32.9812 INFO Fetching all the Restaurants from the storage
+2020-03-26 12:59:33.0005 INFO Returning 51 restaurants
+2020-03-26 12:59:54.5537 INFO Fetching all the Restaurants from the storage
+2020-03-26 12:59:54.5721 INFO Returning 51 restaurants
